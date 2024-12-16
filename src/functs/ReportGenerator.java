@@ -190,7 +190,7 @@ public class ReportGenerator {
 		//JasperCompileManager.compileReportToFile( new File("").getAbsolutePath() + "/src/jaspertemplate/voucherprint.jrxml", new File("").getAbsolutePath() + "/src/jaspertemplate/voucherprint.jasper");
 		//JasperCompileManager.compileReportToFile(new File("").getAbsolutePath() + "/src/jaspertemplate/voucherprint.jrxml", new File("").getAbsolutePath() + "/src/jaspertemplate/voucherprint.jasper");
 		
-		JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(new File("").getAbsolutePath() +"/src/jaspertemplate/voucherprint.jasper");
+		JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(new File("").getAbsolutePath() +"/DB_Project/src/jaspertemplate/voucherprint.jasper");
 		
 		//JasperDesign jasperDesign = JRXmlLoader.load(new File("").getAbsolutePath() + "/src/jaspertemplate/voucherprint.jasper");
 		//System.out.println("file is : " + new File("").getAbsolutePath() + "/src/jaspertemplate/voucherprint.jasper");
@@ -512,10 +512,10 @@ public class ReportGenerator {
 		File outDir = new File("../Desktop/UCSMPOS");
 		outDir.mkdirs();
 
-		JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(new File("").getAbsolutePath() +"/src/jaspertemplate/daily_report.jasper");
+		JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(new File("").getAbsolutePath() +"/DB_Project/src/jaspertemplate/daily_report.jasper");
 		
 		//JasperDesign jasperDesign = JRXmlLoader.load(new File("").getAbsolutePath() + "/src/jaspertemplate/daily_report.jasper");
-		System.out.println("file is : " + new File("").getAbsolutePath() + "/src/jaspertemplate/daily_report.jasper");
+		System.out.println("file is : " + new File("").getAbsolutePath() + "/DB_Project/src/jaspertemplate/daily_report.jasper");
 
 		/* Using compiled version(.jasper) of Jasper report to generate PDF */
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, param, new JREmptyDataSource());
@@ -604,7 +604,7 @@ public class ReportGenerator {
 		//JasperDesign jasperDesign = JRXmlLoader.load(new File("").getAbsolutePath() + "/src/jaspertemplate/popular_item_report.jasper");
 	//	System.out.println("file is : " + new File("").getAbsolutePath() + "/src/jaspertemplate/popular_item_report.jasper");
 
-		JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(new File("").getAbsolutePath() +"/src/jaspertemplate/popular_item_report.jasper");
+		JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(new File("").getAbsolutePath() +"/DB_Project/src/jaspertemplate/popular_item_report.jasper");
 		// OutputStream outputfile = new FileOutputStream(new
 		// File("/Users/tylersai/Desktop/jaspervoucher.pdf"));
 
@@ -1007,7 +1007,7 @@ public class ReportGenerator {
 		outDir.mkdirs();
 
 		
-		JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(new File("").getAbsolutePath() +"/src/jaspertemplate/monthly_report.jasper");
+		JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(new File("").getAbsolutePath() +"/DB_Project/src/jaspertemplate/monthly_report.jasper");
 		
 		//JasperDesign jasperDesign = JRXmlLoader.load(new File("").getAbsolutePath() + "/src/jaspertemplate/monthly_report.jasper");
 	//	System.out.println("file is : " + new File("").getAbsolutePath() + "/src/jaspertemplate/monthly_report.jasper");
