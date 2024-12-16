@@ -83,23 +83,7 @@ public class LoginController{
 	        new DBInitialize().DBInitialize();;
 	        
 	        bt_rdo_cashier.setSelected(true);
-	    }
-	    
-
-/*	    private void dbInitialize() throws SQLException, ClassNotFoundException {
-			// TODO Auto-generated method stub
-	    	
-	    	  // Load the JDBC driver
-	    	Class.forName("com.mysql.jdbc.Driver"); System.out.println("Driver loaded");
-	    	  // Connect to a database
-	    	 Connection connection = DriverManager.getConnection ("jdbc:mysql://localhost:8889/ucsmpos","root","root");
-	    	System.out.println("Database connected"); // Create a statement
-	    	   statement = connection.createStatement();
-	    	  // Execute a statement
-	    	  
-	    	  
-	    	 
-		}*/
+	    }	    
 
 
 		@FXML
@@ -250,7 +234,7 @@ public class LoginController{
 				primaryStage.setTitle("Cashier Panel");
 				//primaryStage.sizeToScene();
 				primaryStage.setResizable(false);
-				primaryStage.getIcons().add(new Image("graphic/poslogorect.png"));
+				primaryStage.getIcons().add(new Image("graphic/poslogorect.jpg"));
 				primaryStage.setMaximized(false);
 				primaryStage.show();
 		    }
@@ -271,7 +255,7 @@ public class LoginController{
 				primaryStage.setTitle("Admin Panel");
 				//primaryStage.sizeToScene();
 				primaryStage.setResizable(false);
-				primaryStage.getIcons().add(new Image("graphic/poslogorect.png"));
+				primaryStage.getIcons().add(new Image("graphic/poslogorect.jpg"));
 				primaryStage.setMaximized(false);
 				primaryStage.show();
 		    }

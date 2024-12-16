@@ -19,7 +19,7 @@
             <JFXButton fx:id="bt_login" defaultButton="true" layoutX="88.0" layoutY="443.0" onAction="#bt_login_action" prefHeight="49.0" prefWidth="278.0" ripplerFill="#6578a6" style="-fx-background-color: #a09533;" text="Login" />
             <ImageView fitHeight="162.0" fitWidth="190.0" layoutX="146.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" style="-fx-alignment: center;">
                <image>
-                  <Image url="@../graphic/poslogorect.png" />
+                  <Image url="@../graphic/poslogorect.jpg" />
                </image>
             </ImageView>
             <JFXRadioButton fx:id="bt_rdo_admin" layoutX="84.0" layoutY="399.0" text="Admin" textFill="WHITE">
@@ -30,9 +30,9 @@
             <JFXRadioButton fx:id="bt_rdo_cashier" layoutX="266.0" layoutY="399.0" text="Cashier" textFill="#f2f2f2" toggleGroup="$usertype" />
          </children>
       </AnchorPane>
-      <Label layoutX="131.0" layoutY="284.0" prefHeight="114.0" prefWidth="570.0" style="-fx-text-fill: #FFFFFF; -fx-font-size: 60; -fx-font-style: italic;" text="Tyler's POS System" />
+      <Label layoutX="131.0" layoutY="284.0" prefHeight="114.0" prefWidth="570.0" style="-fx-text-fill: #FFFFFF; -fx-font-size: 60; -fx-font-style: italic;" text="POS System" />
       <Label layoutX="272.0" layoutY="391.0" prefHeight="59.0" prefWidth="403.0" style="-fx-text-fill: #FFFFFF; -fx-font-size: 27;" text="Made For Your Retail Operation" textAlignment="JUSTIFY" />
-      <Label layoutX="1090.0" layoutY="669.0" text="Developed by Tyler ©" />
-      <Label layoutX="19.0" layoutY="669.0" prefHeight="15.0" prefWidth="172.0" text=" Copyright © to UCSM 2018" />
+      <Label layoutX="1090.0" layoutY="669.0" text="Developed by SHAPATARZ ©" />
+      <Label layoutX="19.0" layoutY="669.0" prefHeight="15.0" prefWidth="172.0" text=" Copyright © to SHAPATARZ 2024" />
    </children>
 </AnchorPane>

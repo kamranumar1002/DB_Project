@@ -156,7 +156,7 @@ public class MainCashierController {
 		// scene transaction
 		try {
 			new LoginPg().start((Stage) bt_logout.getScene().getWindow());
-			th.interrupt();
+			// th.interrupt();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -198,47 +198,6 @@ public class MainCashierController {
 
 		lb_slip_no.setText("" + nowid);
 		Common.slipno = "" + nowid;
-
-		th = new Thread(() -> {
-			try {
-				//tb_total_item.refresh();
-				tf_name_search.clear();
-				tf_barcode_search.clear();
-
-				ss = new ServerSocket(5000);
-				System.out.println("Server is running at port : 5000");
-
-				while (true) {
-					s = ss.accept();
-					inputFromClient = new DataInputStream(s.getInputStream());
-					outputToClient = new DataOutputStream(s.getOutputStream());
-
-					String datafromandriod = inputFromClient.readUTF();
-					// A8:81:95:8B:1C:AC
-
-					System.out.println("Received from android: " + datafromandriod);
-					// inputFromClient.close();
-					// s.close();
-
-					Platform.runLater(() -> tf_barcode_search.setText("" + datafromandriod));
-					// tb_total_item.refresh();
-					// tb_total_item.getItems().clear();
-					// tb_total_item.refresh();
-					data.clear();
-					data = SearchBarcode.SearchByBarcode(datafromandriod);
-					System.out.println("data from function db qr search is : " + data.get(0).getName());
-					// tb_total_item.refresh();
-					
-					tb_total_item.setItems(data);
-					tb_total_item.refresh();
-					//tb_total_item.refresh();
-
-				} // end of if
-			}
-			catch (Exception ex) {
-			}
-		});
-		th.start();
 		
 
 		tf_total.setAlignment(Pos.BOTTOM_RIGHT);
@@ -362,49 +321,13 @@ public class MainCashierController {
 
 		col_purchase_discount.setCellValueFactory(new PropertyValueFactory<Sale, String>("discount"));
 
-		/*
-		 * col_purchase_totalamount.setCellValueFactory(new
-		 * Callback<CellDataFeatures<Sale, String>, ObservableValue<String>>() {
-		 * 
-		 * 
-		 * 
-		 * public ObservableValue<String> call(CellDataFeatures<Sale, String> param) {
-		 * 
-		 * 
-		 * double total = param.getValue().getQuantity() *
-		 * Double.parseDouble(param.getValue().getUnitamount());
-		 * 
-		 * 
-		 * return new SimpleStringProperty(""+total);
-		 * 
-		 * }
-		 * 
-		 * });
-		 */
 		col_purchase_totalamount.setCellValueFactory(new PropertyValueFactory<Sale, String>("totalamount"));
 
-		/*
-		 * col_purchase_totalamount.setCellValueFactory(cellData -> { Sale data =
-		 * cellData.getValue(); return Bindings.createDoubleBinding( () -> { try {
-		 * double price = data.getUnitamount(); double quantity = data.getQuantity();
-		 * return price * quantity ; } catch (NumberFormatException nfe) { return 0 ; }
-		 * }, data.totalamountProperty(), data.quantityProperty() ); });
-		 */
 		tb_sale.setEditable(true);
 		tb_sale.setItems(purchasedata);
 		tb_sale.getColumns().addAll(col_purchase_barcode, col_purchase_name, col_purchase_price, col_purchase_quantity,
 				col_purchase_discount, col_purchase_totalamount);
 		tb_sale.refresh();
-
-		/*
-		 * col_item_id.setCellValueFactory(new Callback<CellDataFeatures<ProductItem,
-		 * String>, ObservableValue<String>>() {
-		 * 
-		 * public ObservableValue<String> call(CellDataFeatures<ProductItem, String>
-		 * param) {
-		 * 
-		 * return new SimpleStringProperty(""); } });
-		 */
 
 		// set cashier name
 		lb_cashier_name.setText(Common.cashierrec.getName());
@@ -605,7 +528,7 @@ public class MainCashierController {
 		sg.setResizable(false);
 		sg.setMaximized(false);
 		sg.setTitle("Redeem Cash Card");
-		sg.getIcons().add(new Image("graphic/poslogorect.png"));
+		sg.getIcons().add(new Image("graphic/poslogorect.jpg"));
 		sg.initModality(Modality.APPLICATION_MODAL);
 		sg.show();
 
@@ -804,7 +727,7 @@ public class MainCashierController {
 		sg.setResizable(true);
 		sg.setMaximized(false);
 		sg.setTitle("Create Card");
-		sg.getIcons().add(new Image("graphic/poslogorect.png"));
+		sg.getIcons().add(new Image("graphic/poslogorect.jpg"));
 		sg.initModality(Modality.APPLICATION_MODAL);
 		sg.show();
 
@@ -857,7 +780,7 @@ public class MainCashierController {
 			sg.setResizable(true);
 			sg.setMaximized(false);
 			sg.setTitle("Card Payment");
-			sg.getIcons().add(new Image("graphic/poslogorect.png"));
+			sg.getIcons().add(new Image("graphic/poslogorect.jpg"));
 			sg.initModality(Modality.APPLICATION_MODAL);
 			sg.show();
 		}

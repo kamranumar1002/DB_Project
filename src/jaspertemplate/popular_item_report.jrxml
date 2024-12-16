@@ -320,7 +320,7 @@
 			</staticText>
 			<image>
 				<reportElement x="480" y="-71" width="88" height="71" uuid="aceae212-66cb-49d4-99b5-88b397ba4e4c"/>
-				<imageExpression><![CDATA["/src/graphic/poslogorect.png"]]></imageExpression>
+				<imageExpression><![CDATA["/src/graphic/poslogorect.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</detail>
@@ -345,7 +345,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Bottom">
 					<font fontName="Arial" size="7" isItalic="true"/>
 				</textElement>
-				<text><![CDATA[Provided by Tyler's POS System]]></text>
+				<text><![CDATA[Provided by POS System]]></text>
 			</staticText>
 			<image>
 				<reportElement x="402" y="1" width="149" height="110" uuid="9f7a5fd4-318a-4a5c-a483-04507026ef48"/>

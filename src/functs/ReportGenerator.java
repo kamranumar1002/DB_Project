@@ -184,7 +184,7 @@ public class ReportGenerator {
 		
 		
 		// Make sure the output directory exists.
-		File outDir = new File("../Desktop/UCSMPOS");
+		File outDir = new File("../Desktop/SHAPATARZ");
 		outDir.mkdirs();
 
 		//JasperCompileManager.compileReportToFile( new File("").getAbsolutePath() + "/src/jaspertemplate/voucherprint.jrxml", new File("").getAbsolutePath() + "/src/jaspertemplate/voucherprint.jasper");
@@ -211,7 +211,7 @@ public class ReportGenerator {
 
 		// ExporterOutput
 		OutputStreamExporterOutput exporterOutput = new SimpleOutputStreamExporterOutput(
-				"../Desktop/UCSMPOS/Voucher.pdf");
+				"../Desktop/SHAPATARZPOS/Voucher.pdf");
 		// Output
 		exporter.setExporterOutput(exporterOutput);
 
@@ -223,7 +223,7 @@ public class ReportGenerator {
 		JasperViewer jasperViewer = new JasperViewer(jasperPrint, false);
 		jasperViewer.setVisible(true);
 		jasperViewer.setFitPageZoomRatio();
-		jasperViewer.setTitle("UCSM POS System: Printing service");
+		jasperViewer.setTitle("SHAPATARZ POS System: Printing service");
 		// jasperViewer.getIc
 		
 		Common.buygetdata.clear();
@@ -509,7 +509,7 @@ public class ReportGenerator {
 		param.put("promotion",""+promotion );
 		
 		// Make sure the output directory exists.
-		File outDir = new File("../Desktop/UCSMPOS");
+		File outDir = new File("../Desktop/SHAPATARZPOS");
 		outDir.mkdirs();
 
 		JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(new File("").getAbsolutePath() +"/DB_Project/src/jaspertemplate/daily_report.jasper");
@@ -536,7 +536,7 @@ public class ReportGenerator {
 
 		// ExporterOutput
 		OutputStreamExporterOutput exporterOutput = new SimpleOutputStreamExporterOutput(
-				"../Desktop/UCSMPOS/daily_report.pdf");
+				"../Desktop/SHAPATARZPOS/daily_report.pdf");
 		// Output
 		exporter.setExporterOutput(exporterOutput);
 
@@ -548,7 +548,7 @@ public class ReportGenerator {
 		JasperViewer jasperViewer = new JasperViewer(jasperPrint, false);
 		jasperViewer.setVisible(true);
 		jasperViewer.setFitPageZoomRatio();
-		jasperViewer.setTitle("UCSM POS System: Printing service");
+		jasperViewer.setTitle("SHAPATARZ POS System: Printing service");
 		// jasperViewer.getIc
 
 	}
@@ -598,7 +598,7 @@ public class ReportGenerator {
 		
 
 		// Make sure the output directory exists.
-		File outDir = new File("../Desktop/UCSMPOS");
+		File outDir = new File("../Desktop/SHAPATARZPOS");
 		outDir.mkdirs();
 
 		//JasperDesign jasperDesign = JRXmlLoader.load(new File("").getAbsolutePath() + "/src/jaspertemplate/popular_item_report.jasper");
@@ -621,7 +621,7 @@ public class ReportGenerator {
 
 		// ExporterOutput
 		OutputStreamExporterOutput exporterOutput = new SimpleOutputStreamExporterOutput(
-				"../Desktop/UCSMPOS/Popular_item.pdf");
+				"../Desktop/SHAPATARZPOS/Popular_item.pdf");
 		// Output
 		exporter.setExporterOutput(exporterOutput);
 
@@ -633,7 +633,7 @@ public class ReportGenerator {
 		JasperViewer jasperViewer = new JasperViewer(jasperPrint, false);
 		jasperViewer.setVisible(true);
 		jasperViewer.setFitPageZoomRatio();
-		jasperViewer.setTitle("UCSM POS System: Printing service");
+		jasperViewer.setTitle("SHAPATARZ POS System: Printing service");
 	}
 	
 	
@@ -1003,7 +1003,7 @@ public class ReportGenerator {
 		param.put("categorysale","Item Sale" );
 		
 		// Make sure the output directory exists.
-		File outDir = new File("../Desktop/UCSMPOS");
+		File outDir = new File("../Desktop/SHAPATARZPOS");
 		outDir.mkdirs();
 
 		
@@ -1028,7 +1028,7 @@ public class ReportGenerator {
 
 		// ExporterOutput
 		OutputStreamExporterOutput exporterOutput = new SimpleOutputStreamExporterOutput(
-				"../Desktop/UCSMPOS/monthly_report.pdf");
+				"../Desktop/SHAPATARZPOS/monthly_report.pdf");
 		// Output
 		exporter.setExporterOutput(exporterOutput);
 
@@ -1040,7 +1040,7 @@ public class ReportGenerator {
 		JasperViewer jasperViewer = new JasperViewer(jasperPrint, false);
 		jasperViewer.setVisible(true);
 		jasperViewer.setFitPageZoomRatio();
-		jasperViewer.setTitle("UCSM POS System: Printing service");
+		jasperViewer.setTitle("SHAPATARZ POS System: Printing service");
 		
 		
 	}

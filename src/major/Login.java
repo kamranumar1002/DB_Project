@@ -19,7 +19,7 @@ public class Login extends Application{
 		primaryStage.setResizable(false);
 		primaryStage.setMaximized(false);
 		primaryStage.setTitle("SHAPATARZ POS System");
-		primaryStage.getIcons().add(new Image("graphic/poslogorect.png"));
+		primaryStage.getIcons().add(new Image("graphic/poslogorect.jpg"));
 		primaryStage.show();
 		
 	}

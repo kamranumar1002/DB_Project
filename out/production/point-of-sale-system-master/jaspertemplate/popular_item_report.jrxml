@@ -320,7 +320,7 @@
 			</staticText>
 			<image>
 				<reportElement x="480" y="-71" width="88" height="71" uuid="aceae212-66cb-49d4-99b5-88b397ba4e4c"/>
-				<imageExpression><![CDATA["/src/graphic/poslogorect.png"]]></imageExpression>
+				<imageExpression><![CDATA["/src/graphic/poslogorect.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</detail>
